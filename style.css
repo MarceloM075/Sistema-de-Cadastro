@@ -1,76 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Open+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 
 body{
-    font-family: Arial, sans-serif;
-    background-color: grey;
-}
-
-h1{
-    text-align: center;
-    text-shadow: 1px 1px 5px rgb(53, 53, 53);
-}
-
-section{
-    background-color: white;
-    border-radius: 3px;
-    padding: 10px;
+    background-color: rgb(240, 240, 240);
     margin: 0 auto;
+}
+
+
+nav{
+    margin: 0 auto;
+    background: rgb(24, 24, 187);
+    color: white;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    width: 500px;    
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.404);
+    max-width: 1000px; 
+    text-align: right;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.6);
+    align-items: center;
 }
 
-section h2{
-    font-size: 18px;
-    padding-left: 20px;
-}
 
-section form{
-    margin-top: 25px;
-    margin-bottom: 5px;
-}
-
-section form div input{
-    display: block;
-}
-
-section label{
-    padding-left: 10px;
-}
-
-form > div{
-    padding-left: 20px;
-    background: white;
-}
-
-form div input {
-    background: rgb(253, 253, 253);
-    border-radius: 4px;
-    margin: 8px;
-    border-width: 1px;
-    height: 22px;
-    padding-left: 5px;
-}
-
-form div button {
-    color: white;
-    background: rgb(77, 77, 77);
-    border-radius: 4px;
-    border: none;
-    padding: 8px;
-    width: 80px;
-    margin-top: 10px;
-    margin-bottom: 8px;
-}
-
-.button{
-    border: none;
-    border-radius: 4px;
-    color: white;
+nav li{
     display: inline;
-    margin-left: 300px;
 }
 
-button[type="reset"]{
-    margin-left: 5px;
+nav li.icon{
+    float: left;
+    font-size: 50px;
+    padding-left: 15px;
+    padding-top: 2px;
 }
 
+nav li a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+
+nav li a:hover{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.699);
+    transition: .4s;
+}
+
+.cardBox{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    background-color: white;
+    max-width: 1000px;
+    position: relative;
+    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.6);
+    justify-content: center;
+}   
+
+.card{
+    position: relative;
+    background-color: white;
+    padding: 50px;
+    justify-content: space-between;
+    display: flex;
+}
