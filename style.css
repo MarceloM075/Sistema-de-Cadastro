@@ -3,27 +3,35 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 body{
-    background-color: rgb(240, 240, 240);
-    margin: 0 auto;
+    background-color: #fafafa;
 }
 
+.siteGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 6vh 40vh 54vh;
+    grid-template-areas: ". nav nav ."
+                         ". main main ."
+                         ". article article .";
+}
 
 nav{
     margin: 0 auto;
-    background: rgb(24, 24, 187);
+    background: #425edb;
     color: white;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     max-width: 1000px; 
+    width: 1000px;
     text-align: right;
-    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.6);
     align-items: center;
+    grid-area: nav;
+    padding-right: 15px;
 }
-
 
 nav li{
     display: inline;
@@ -32,7 +40,7 @@ nav li{
 nav li.icon{
     float: left;
     font-size: 50px;
-    padding-left: 15px;
+    padding-left: 30px;
     padding-top: 2px;
 }
 
@@ -44,29 +52,91 @@ nav li a{
 }
 
 nav li a:hover{
-    color: white;
+    color: #bbbbbb;
     text-decoration: none;
     padding: 20px;
     display: inline-block;
-    background-color: rgba(0, 0, 0, 0.699);
+    background-color: rgba(0, 0, 0, 0.6);
     transition: .4s;
 }
 
-.cardBox{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    background-color: white;
-    max-width: 1000px;
-    position: relative;
-    box-shadow: 1px 1px 25px rgba(0, 0, 0, 0.6);
-    justify-content: center;
-}   
+main{
+    grid-area: main;
+    background-color: #b3ddff;
+    
+}
 
-.card{
-    position: relative;
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 70%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center;
+    align-items: center;
+    grid-gap: 80px;
+}
+
+.iconCard{
+    font-size: 100px;
+    color: rgb(0, 119, 255);
+    text-align: center;
+    grid-area: iconCard;
+    padding-left: 40px;
+    padding-top: 45px;
+}
+
+
+.card1{
+    width: 100%;
+    height: 200px;
     background-color: white;
-    padding: 50px;
-    justify-content: space-between;
-    display: flex;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card2{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.pacientesCadastrados, .grupoRisco{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 200px;
+    grid-template-areas: "textoCard iconCard"
+                         "numeroCard iconCard";
+}
+
+.textoCard{
+    grid-area: textoCard;
+    font-weight: 700;
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.numeroCard{
+    grid-area: numeroCard;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    color: rgba(153, 153, 153, 0.7);
+    font-weight: 600;
+}
+
+.textoCard, .numeroCard{
+    vertical-align: center;
+    text-align: center;
+    
+}
+
+article{
+    background-color: #b3ddff;
+    grid-area: article;
 }

@@ -8,33 +8,41 @@
     <title>Página Inicial</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li class="icon"><ion-icon name="heart"></ion-icon></li>
-            <li><a href="index.html">Página Inicial</a></li>
-            <li><a href="cadastro.html">Cadastrar</a></li>
-            <li><a href="#">Pacientes Cadastrados</a></li>
-        </ul>
-    </nav>
-    <div class="cardBox">
-        <div class="card">
-            <div>
-                <div class="textoCard">Total de pacientes cadastrados</div>
-                <div class="numeroCard">1502 pacientes</div>
+    <div class="siteGrid">
+        <nav>
+            <ul>
+                <li class="icon"><ion-icon name="heart"></ion-icon></li>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="cadastro.html">Cadastrar</a></li>
+                <li><a href="#">Pacientes Cadastrados</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="cards">
+                <div class="card1">
+                    <div class ="pacientesCadastrados">
+                        <div class="textoCard">Pacientes <br> cadastrados</div>
+                        <div class="numeroCard">1502 pacientes</div>
+                        <ion-icon class="iconCard" name="person-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="grupoRisco">
+                        <div class="textoCard">Grupo de risco</div>
+                        <div class="numeroCard">502 pacientes</div>
+                        <ion-icon class="iconCard" name="warning-outline"></ion-icon>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <div>
-                <div class="textoCard">Número de pacientes no grupo de risco</div>
-                <div class="numeroCard">502 pacientes</div>
-            </div>
-        </div>
+        </main>
+        <article>
+            
+        </article>  
     </div>
 
     <!-- 
         Pacientes Grupo de Risco
-        Pacientes Cadastrados
-        
+        Pacientes Cadastrados  
     -->
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
