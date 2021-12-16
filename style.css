@@ -1,75 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Open+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
 
 body{
-    font-family: Arial, sans-serif;
-    background-color: grey;
+    background-color: #fafafa;
 }
 
-h1{
-    text-align: center;
+.siteGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 6vh 40vh 54vh;
+    grid-template-areas: ". nav nav ."
+                         ". main main ."
+                         ". article article .";
 }
 
-section{
-    background-color: white;
-    border-radius: 3px;
-    padding: 10px;
+nav{
     margin: 0 auto;
+    background: #425edb;
+    color: white;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    width: 500px;    
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.404);
+    max-width: 1000px; 
+    width: 1000px;
+    text-align: right;
+    align-items: center;
+    grid-area: nav;
+    padding-right: 15px;
 }
 
-section h2{
-    font-size: 18px;
-    padding-left: 20px;
-}
-
-section form{
-    margin-top: 25px;
-    margin-bottom: 5px;
-}
-
-section form div input{
-    display: block;
-}
-
-section label{
-    padding-left: 10px;
-}
-
-form > div{
-    padding-left: 20px;
-    background: white;
-}
-
-form div input {
-    background: rgb(253, 253, 253);
-    border-radius: 4px;
-    margin: 8px;
-    border-width: 1px;
-    height: 22px;
-    padding-left: 5px;
-}
-
-form div button {
-    color: white;
-    background: rgb(77, 77, 77);
-    border-radius: 4px;
-    border: none;
-    padding: 8px;
-    width: 80px;
-    margin-top: 10px;
-    margin-bottom: 8px;
-}
-
-.button{
-    border: none;
-    border-radius: 4px;
-    color: white;
+nav li{
     display: inline;
-    margin-left: 300px;
 }
 
-button[type="reset"]{
-    margin-left: 5px;
+nav li.icon{
+    float: left;
+    font-size: 50px;
+    padding-left: 30px;
+    padding-top: 2px;
 }
 
+nav li a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+
+nav li a:hover{
+    color: #bbbbbb;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: .4s;
+}
+
+main{
+    grid-area: main;
+    background-color: #b3ddff;
+    
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 70%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center;
+    align-items: center;
+    grid-gap: 80px;
+}
+
+.iconCard{
+    font-size: 100px;
+    color: rgb(0, 119, 255);
+    text-align: center;
+    grid-area: iconCard;
+    padding-left: 40px;
+    padding-top: 45px;
+}
+
+
+.card1{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card2{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.pacientesCadastrados, .grupoRisco{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 200px;
+    grid-template-areas: "textoCard iconCard"
+                         "numeroCard iconCard";
+}
+
+.textoCard{
+    grid-area: textoCard;
+    font-weight: 700;
+    font-size: 25px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.numeroCard{
+    grid-area: numeroCard;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    color: rgba(153, 153, 153, 0.7);
+    font-weight: 600;
+}
+
+.textoCard, .numeroCard{
+    vertical-align: center;
+    text-align: center;
+    
+}
+
+article{
+    background-color: #b3ddff;
+    grid-area: article;
+}
