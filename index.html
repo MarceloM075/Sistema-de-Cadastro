@@ -4,57 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="teste.css">
     <title>Página Inicial</title>
 </head>
 <body>
-    <section class="siteGrid">
-        <nav>
-            <ul>
-                <li class="logo"><ion-icon name="heart"></ion-icon></li>
-                <li><a href="index.html">Página Inicial</a></li>
-                <li><a href="cadastro.html">Cadastrar</a></li>
-                <li><a href="#">Pacientes Cadastrados</a></li>
-            </ul>
-        </nav>
-        <div class="navEsquerda"></div>
-        <div class="navDireita"></div>
-        <section class="dados">
-            <div class="cardsGrid">
-                <div class="card">
-                    <div class ="dadosGrid">
-                        <div class="textoCard">Pacientes <br> cadastrados</div>
-                        <div class="numeroCard">1502 pacientes</div>
-                        <ion-icon class="iconCard" name="person-outline"></ion-icon>
-                    </div>
-                </div>
+    <nav>
+        <ul>
+            <li class="logo"><ion-icon name="heart"></ion-icon></li>
+            <li><a href="index.html">Página Inicial</a></li>
+            <li><a href="cadastro.html">Cadastrar</a></li>
+            <li><a href="#">Pacientes Cadastrados</a></li>
+        </ul>
+    </nav>
 
-                <div class="card">
-                    <div class="dadosGrid">
-                        <div class="textoCard" id="risco">Grupo de risco</div>
-                        <div class="numeroCard">502 pacientes</div>
-                        <ion-icon class="iconCard" name="warning-outline"></ion-icon>
-                    </div>
-                </div>
+    <section class="dados">
+        <div class="card">            
+            <div class ="dadosGrid" id="card1">
+                <div class="textoCard">Pacientes cadastrados</div>
+                <div class="numeroCard">1502 pacientes</div>
+                <ion-icon class="iconCard" name="person-outline"></ion-icon>
             </div>
-        </section>
+        
+        </div>   
 
-        <section class="informativo">
-            <div class="proteger">
-                <h1>Se protegendo contra o Corona Vírus</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, dignissimos labore? Aspernatur totam quasi, soluta impedit amet cum, libero harum atque, possimus ut reprehenderit? Neque delectus non expedita suscipit fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptate, modi id facere eaque doloremque soluta natus ipsa consectetur incidunt ad tempore pariatur aliquid similique? Omnis accusamus et amet alias.</p>
+        <div class="card">
+            <div class="dadosGrid" id="card2">
+                <div class="textoCard" id="risco">Grupo <br> de risco</div>
+                <div class="numeroCard">502 pacientes</div>
+                <ion-icon class="iconCard" name="warning-outline"></ion-icon>
             </div>
-
-            <div class="virus">
-                <h1>Sobre o Corona Vírus</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit repellendus et ratione. Nobis nisi facere soluta provident esse corporis quas ab magni excepturi voluptatibus, vel, officia qui quasi repudiandae fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores voluptates officia nobis, recusandae vitae aut suscipit at quas, praesentium dolores totam veniam sapiente repellat a tempora voluptate eum et.</p>
-            </div>  
-        </section> 
-
-        <footer class="rodape">
-            <p>Feito por Marcelo Marques Almeida</p>
-        </footer>  
+        </div>
     </section>
+
+    <section class="informativo">
+        <div class="paragrafo">
+            <h1>Se protegendo contra o Corona Vírus</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, dignissimos labore? Aspernatur totam quasi, soluta impedit amet cum, libero harum atque, possimus ut reprehenderit? Neque delectus non expedita suscipit fugiat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptate, modi id facere eaque doloremque soluta natus ipsa consectetur incidunt ad tempore pariatur aliquid similique? Omnis accusamus et amet alias.</p>
+        </div>
+
+        <div class="paragrafo" id="virus">
+            <h1>Sobre o Corona Vírus</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit repellendus et ratione. Nobis nisi facere soluta provident esse corporis quas ab magni excepturi voluptatibus, vel, officia qui quasi repudiandae fugiat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati asperiores voluptates officia nobis, recusandae vitae aut suscipit at quas, praesentium dolores totam veniam sapiente repellat a tempora voluptate eum et.</p>
+        </div>  
+    </section> 
+
+    <footer class="rodape">
+        <p>Feito por Marcelo Marques Almeida</p>
+    </footer>  
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
