@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="style.css">
     <title>Página Inicial</title>
 </head>
 <body>
@@ -12,8 +12,8 @@
         <ul>
             <li class="logo"><ion-icon name="heart"></ion-icon></li>
             <li><a href="index.html">Página Inicial</a></li>
-            <li><a href="cadastro.html">Cadastrar</a></li>
             <li><a href="#">Pacientes Cadastrados</a></li>
+            <li><a id = "entrar" onclick="mostrarModalLogin()">Entrar</a></li>
         </ul>
     </nav>
 
@@ -52,7 +52,46 @@
         <p>Feito por Marcelo Marques Almeida</p>
     </footer>  
 
+    <div class="modal-container" id="modal-container">
+        <div class="modal" id="modal">
+            <h2>Login</h2>
+            <form>
+                <div class="input-field">
+                    <input id="user" type="text" placeholder="Digite seu nome de usuário">
+                    <div class="underline"></div>
+                </div>
+                <div class="input-field" id="input-field2">
+                    <input id="password" type="password" placeholder="Digite sua senha">
+                    <div class="underline"></div>
+                </div>
+                <input type="button" value="Entrar" id="botaoEntrar" onclick="entrarNoSistema()">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const modalContainer = document.querySelector('.modal-container')
+        const modal = document.querySelector('.modal')
+        const user = document.querySelector('#user')
+        const password = document.querySelector('#password')
+
+        function mostrarModalLogin(){
+            modalContainer.style = 'visibility: visible;'
+            modal.style = 'animation: modal 0.2s;'
+        }
+
+        modalContainer.addEventListener('click', (e) => {
+            if(e.target.id == 'modal-container'){
+                modalContainer.style = 'visibility: hidden;'
+                modal.style = 'animation: none'
+                user.value = ''
+                password.value = ''
+            } 
+        })
+    </script>
+    <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>
