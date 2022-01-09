@@ -79,8 +79,6 @@ nav li.logo{
 .dados{
     width: 75%;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     margin-bottom: 0;
     margin-top: 60px;
     max-width: 1000px;
@@ -371,7 +369,35 @@ footer{
 }
 
 @media (max-width: 768px){
-    .card .iconCard{
-        font-size: 70px;
+    .dados{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
     }
+
+    .card{
+        width: 100%;
+        margin: 0px;
+    }
+
+    .card .textoCard{
+        font-size: 25px;
+    }
+
+    .card .numeroCard{
+        font-size: 20px;
+    }
+
+    .card .iconCard{
+        font-size: 100px;
+    }
+
+    #card1{
+        margin-right: 0;
+    }
+    
+    #card2{
+        margin-left: 0;
+    }
+
 }

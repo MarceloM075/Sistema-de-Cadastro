@@ -22,7 +22,7 @@
             <div class ="dadosGrid" id="card1">
                 <div class="textoCard">Pacientes cadastrados</div>
                 <div class="numeroCard">1502 pacientes</div>
-                <ion-icon class="iconCard" name="person-outline"></ion-icon>
+                <ion-icon class="iconCard" id="pacientesIcon" name="person-outline"></ion-icon>
             </div>
         
         </div>   
@@ -80,10 +80,10 @@
             modal.style = 'animation: modal 0.2s;'
         }
 
-        modalContainer.addEventListener('click', (e) => {
-            if(e.target.id == 'modal-container'){
+        modalContainer.addEventListener('click', (event) => {
+            if(event.target.id == 'modal-container'){
                 modalContainer.style = 'visibility: hidden;'
-                modal.style = 'animation: none;'
+                modal.style = 'animation: none 0.2s;'
                 user.value = ''
                 password.value = ''
             } 
