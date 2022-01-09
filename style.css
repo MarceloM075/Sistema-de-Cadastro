@@ -46,6 +46,7 @@ nav li{
 }
 
 nav li a{
+    position: relative;
     text-decoration: none;
     color: var(--bege-color);
     font-size: var(--font-size-nav);
@@ -400,4 +401,28 @@ footer{
         margin-left: 0;
     }
 
+    #inicial{
+        visibility: hidden;
+    }
+
+    nav ul li:nth-child(2){
+        margin: 0;
+        width: 0;
+    }
+
+    nav li.logo{
+        margin-left: 20px;
+    }
+
+}
+
+@media (max-width: 465px) {
+    nav li a{
+        position: relative;
+        font-size: 18px;
+        padding-top: 500px;
+    }
+    nav ul li{
+        margin-top: 26px;
+    }
 }
